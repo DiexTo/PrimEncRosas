@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-row >
+      <ion-col size="3">
+        <ion-img class="logo" src="assets/imgs/logoPrimaria.png" ></ion-img>
+      </ion-col>
+
+      <ion-col size="9">
+        <ion-title >Bienvenido</ion-title>
+      </ion-col>
+
+    </ion-row>
+   
+    
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+<ion-grid fixed>
+  <ion-row class="ion-text-center">
+    
+
+      <br>
+  <ion-card >
+
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Inicia tu sesion</ion-card-title>
+    </ion-card-header>
+
+    <ion-list>
+      
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Role</ion-label>
+        <ion-input [(ngModel)]="role" type="text"></ion-input>
+      </ion-item>
+
+
+    </ion-list>
+    
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand=full >
+          Registrarme
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand=full (click)="iniciarSesion()">
+          Iniciar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+ 
+   
+  </ion-row>
+</ion-grid>
+
+
+
+
+</ion-content>

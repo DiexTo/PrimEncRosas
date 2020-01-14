@@ -1,0 +1,61 @@
+<!-- los contentId son nuevos para ionic 5 -->
+
+<ion-split-pane contentId="contenido">
+  <ion-menu contentId="contenido" side="start">
+   
+    <ion-header>
+      <ion-toolbar class="menu">
+        <ion-title>Modulo de profesores</ion-title>
+      </ion-toolbar>
+    </ion-header>
+   
+    <ion-content class="menuContent">
+
+     <ion-item class="fondo">
+       <ion-avatar slot="start">
+         <img src="assets/imgs/persona.jpg" />
+       </ion-avatar>
+      <ion-label> {{authService.usuarioPureba.nombre}} </ion-label>
+     </ion-item>
+
+     <ion-list >
+       <ion-menu-toggle auto-hide="false" *ngFor="let page of menuAdmin">
+        <ion-item [routerLink]="page.url" routerDirection="root" 
+        [class.active-item]="selectedPath.startsWith(page.url)" 
+        class="menuContent">
+          <ion-label>
+            {{ page.title}}
+          </ion-label>
+
+          <ion-icon mode="ios" [name]="page.icon"></ion-icon>
+
+        </ion-item>
+       </ion-menu-toggle>
+
+       <ion-item tappable  routerDirection="root" (click)="cerrarSesion()"
+       class="menuContent">
+
+        
+        <ion-icon slot="start" name="log-out"></ion-icon>
+         Cerrar sesion y salir
+      
+        
+       </ion-item>
+
+       <ion-item>
+        <ion-button routerLink="formulario" routerDirection="root">
+          Formulario component
+        </ion-button>
+       </ion-item>
+
+     </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+  <ion-router-outlet id="contenido" main></ion-router-outlet>
+</ion-split-pane>
+
+
+  
+
+

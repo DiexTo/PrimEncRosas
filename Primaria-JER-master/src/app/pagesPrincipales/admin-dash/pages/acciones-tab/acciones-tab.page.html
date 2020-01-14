@@ -1,0 +1,280 @@
+<ion-header>
+  <ion-toolbar class="header">
+
+   
+    <ion-buttons slot="start">
+        <ion-menu-button menuId="contenido" >
+        </ion-menu-button>
+    </ion-buttons>
+    
+  <ion-title class="txtHeader">Acciones</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+
+    <ion-col size="12">
+      
+      <ion-button *ngIf="toggle == false" expand="full" fill="outline" (click)="toggle = true">
+        Crear alumno
+        <ion-icon name="person-add"></ion-icon>
+      </ion-button>
+  
+      <ion-button *ngIf="toggle == true" expand="full" fill="outline" (click)="toggle = false">
+        Cancelar
+        <ion-icon name="close-circle"></ion-icon>      
+      </ion-button>
+
+    </ion-col>
+   
+    
+
+  </ion-row>
+
+
+
+
+
+  <ion-card *ngIf="toggle == true">
+
+    <ion-list>
+      
+      <ion-item>
+        <ion-label position="floating">Escribe el nombre</ion-label>
+        <ion-input type="text" ></ion-input>
+      </ion-item>
+
+
+    </ion-list>
+    
+  </ion-card>
+
+  
+
+
+  <ion-row>
+
+    <ion-col size="12">
+      
+      <ion-button *ngIf="toggle2 == false" expand="full" fill="outline" (click)="toggle2 = true">
+        
+        <ion-icon slot="icon-only" name="arrow-down"></ion-icon>
+        Crear papamovil semanal
+        <ion-icon name="list-box"></ion-icon>
+      </ion-button>
+  
+      <ion-button *ngIf="toggle2 == true" expand="full" fill="outline" (click)="toggle2 = false">
+        Cancelar
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-button>
+
+    </ion-col>
+   
+    
+
+  </ion-row>
+
+  <ion-card *ngIf="toggle2 == true">
+
+    <ion-row>
+      <ion-col size="12">
+
+        <ion-text color="dark">
+        <h1>Fecha:  {{fecha | date:"dd-MM-yyyy"}} </h1>
+        </ion-text>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-item>
+      <ion-label>Selecciona el dia de la semana</ion-label>
+      <ion-select  cancelText="Cancelar" okText="seleccionar"  placeholder="Elige">
+        <ion-select-option value="lunes">Lunes</ion-select-option>
+        <ion-select-option value="martes">Martes</ion-select-option>
+        <ion-select-option value="martes">Miercoles</ion-select-option>
+        <ion-select-option value="martes">Jueves</ion-select-option>
+        <ion-select-option value="martes">Viernes</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- droplist con los dias de la semana -->
+
+    <ion-slides pager="ios" >
+      <ion-slide>
+
+        <ion-card>
+          <ion-card-header>
+            
+            <ion-card-title>Espanol</ion-card-title>
+
+            <ion-card-content>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ab corrupti! Minima saepe, veritatis odit illo aspernatur quidem eius non tempore vero quis provident animi impedit culpa consectetur mollitia architecto.
+            </ion-card-content>
+
+            <ion-list>
+
+              <ion-item>
+                <ion-label>Titulo:</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Objetivo:</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+              
+            </ion-list>
+
+            <ion-row>
+
+              <ion-col size="6">
+                <ion-button >
+                  Limpiar campos
+                  <ion-icon name="trash"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button >
+                  Confirmar
+                  <ion-icon name="checkbox-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+
+          </ion-card-header>
+
+
+        </ion-card>
+
+      
+       
+      </ion-slide>
+
+      
+        <ion-slide>
+
+          <ion-card>
+          
+            <ion-card-header>
+              
+              <ion-card-title>Matematicas</ion-card-title>
+            </ion-card-header>
+
+
+            <ion-card-content>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ab corrupti! Minima saepe, veritatis odit illo aspernatur quidem eius non tempore vero quis provident animi impedit culpa consectetur mollitia architecto.
+            </ion-card-content>
+
+
+            <ion-list>
+
+              <ion-item>
+                <ion-label>Titulo:</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Objetivo:</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+              
+            </ion-list>
+
+            <ion-row>
+
+              <ion-col size="6">
+                <ion-button >
+                  Limpiar campos
+                  <ion-icon name="trash"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button >
+                  Confirmar
+                  <ion-icon name="checkbox-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+  
+          </ion-card>
+          
+        </ion-slide>
+
+        <ion-slide>
+
+          <ion-card>
+          
+            <ion-card-header>
+              <ion-card-title>Ciencias naturales</ion-card-title>
+            </ion-card-header>
+
+
+            <ion-card-content>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ab corrupti! Minima saepe, veritatis odit illo aspernatur quidem eius non tempore vero quis provident animi impedit culpa consectetur mollitia architecto.
+            </ion-card-content>
+
+            <ion-list>
+
+              <ion-item>
+                <ion-label>Titulo:</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Objetivo:</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+              
+            </ion-list>
+            
+
+            <ion-row>
+
+              <ion-col size="6">
+                <ion-button >
+                  Limpiar campos
+                  <ion-icon name="trash"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button >
+                  Confirmar
+                  <ion-icon name="checkbox-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+  
+          </ion-card>
+          
+        </ion-slide>
+
+        <!-- <ion-slide>
+          
+        </ion-slide> -->
+     
+      
+    </ion-slides>
+    
+  </ion-card>
+
+
+  <ion-fab color="dark" horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light">
+        <ion-icon name="person-add"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="paper"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="options"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom" class="tabs">
+
+      <ion-tab-button (click)="notificaciones=2" tab="acciones" class="txtHeader">
+        <ion-icon mode="ios" name="list"></ion-icon>
+          <ion-label>Acciones</ion-label>
+        </ion-tab-button>
+
+    <ion-tab-button (click)="notificaciones=0" tab="notificaciones" class="txtHeader">
+      <ion-icon mode="ios" name="notifications-outline"></ion-icon>
+      <ion-label>Notificaciones</ion-label>
+      <ion-badge *ngIf="notificaciones > 0" color="danger" mode="ios">{{notificaciones}}</ion-badge>
+    </ion-tab-button>
+
+
+
+  </ion-tab-bar>
+
+</ion-tabs>
