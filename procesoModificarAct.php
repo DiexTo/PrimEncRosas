@@ -1,17 +1,27 @@
 <?php
 include_once 'conexion.php';
 
-$id=$_POST['ids'];
-$idM =  $_COOKIE["variable"];
-$tarea= $_POST['tarea'];
-$tema= $_POST['tema'];
-$actividad= $_POST['actividades'];
-$producto= $_POST['producto'];
+$ids=$_REQUEST['id'];
+$idM =  $_COOKIE['variable'];
+$tareas= $_POST['tarea'];
+$temas= $_POST['tema'];
+$act= $_POST['actividades'];
+$productos= $_POST['producto'];
 $fecha= "2020-00-00";
 
 
-$query="UPDATE Actividad SET tarea='$tarea',materia_id='$idM',tema='$tema',actividades='$actividad','producto'=$producto,'dia'=$fecha WHERE id='$id' ";
+$query="UPDATE actividad SET tarea='$tareas',materia_id='$idM',tema='$temas',actividades='$act',producto='$productos',dia='$fecha' WHERE id='$ids' ";
 $resultado=$baseDatos->query($query);
+ 
+var_dump($resultado);
+var_dump($ids);
+var_dump($tareas);
+var_dump($temas);
+
+var_dump($act);
+var_dump($productos);
+var_dump($fecha);
+var_dump($idM);
 
 if($resultado){
     header("Location: mostrarActividad.php");
